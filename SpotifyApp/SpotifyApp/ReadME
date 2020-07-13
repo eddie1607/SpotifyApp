@@ -1,0 +1,16 @@
+criando app clone de spotify
+
+utilizando arquitetura viper
+-> baseada em casos de uso
+-> cada caso de uso deve conter as  5 camadas de as
+
+1-  definir caso de usos
+  UserDisconnected
+  
+2- dentro do caso de uso definir os diretorios das 5 camadas
+ view,presenter,router,inteactor,entity
+ 
+
+ 
+ 
+

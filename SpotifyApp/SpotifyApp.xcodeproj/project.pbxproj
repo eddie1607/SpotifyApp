@@ -13,6 +13,7 @@
 		2F0F757924BCE41E00548DD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F0F757724BCE41E00548DD0 /* Main.storyboard */; };
 		2F0F757B24BCE44000548DD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F0F757A24BCE44000548DD0 /* Assets.xcassets */; };
 		2F0F757E24BCE44000548DD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F0F757C24BCE44000548DD0 /* LaunchScreen.storyboard */; };
+		2F0F759824BCEC2900548DD0 /* ReadME in Resources */ = {isa = PBXBuildFile; fileRef = 2F0F759724BCEC2900548DD0 /* ReadME */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		2F0F759324BCE64D00548DD0 /* ProximaNova-Extrabld.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-Extrabld.otf"; path = "../../../../Downloads/spotifyremake 3/spotifyremake/Resources/ProximaNova-Extrabld.otf"; sourceTree = "<group>"; };
 		2F0F759424BCE64D00548DD0 /* ProximaNova-LightIt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-LightIt.otf"; path = "../../../../Downloads/spotifyremake 3/spotifyremake/Resources/ProximaNova-LightIt.otf"; sourceTree = "<group>"; };
 		2F0F759524BCE64D00548DD0 /* ProximaNova-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-Regular.otf"; path = "../../../../Downloads/spotifyremake 3/spotifyremake/Resources/ProximaNova-Regular.otf"; sourceTree = "<group>"; };
+		2F0F759724BCEC2900548DD0 /* ReadME */ = {isa = PBXFileReference; lastKnownFileType = text; path = ReadME; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 		2F0F757024BCE41E00548DD0 /* SpotifyApp */ = {
 			isa = PBXGroup;
 			children = (
+				2F0F759624BCEBED00548DD0 /* UserDisconnected */,
 				2F0F758524BCE5A600548DD0 /* resource */,
 				2F0F757124BCE41E00548DD0 /* AppDelegate.swift */,
 				2F0F757324BCE41E00548DD0 /* SceneDelegate.swift */,
@@ -80,6 +83,7 @@
 				2F0F757A24BCE44000548DD0 /* Assets.xcassets */,
 				2F0F757C24BCE44000548DD0 /* LaunchScreen.storyboard */,
 				2F0F757F24BCE44000548DD0 /* Info.plist */,
+				2F0F759724BCEC2900548DD0 /* ReadME */,
 			);
 			path = SpotifyApp;
 			sourceTree = "<group>";
@@ -105,6 +109,53 @@
 				2F0F758D24BCE64C00548DD0 /* ProximaNovaCond-SemiboldIt.otf */,
 			);
 			path = resource;
+			sourceTree = "<group>";
+		};
+		2F0F759624BCEBED00548DD0 /* UserDisconnected */ = {
+			isa = PBXGroup;
+			children = (
+				2F0F759D24BCEE5A00548DD0 /* entity */,
+				2F0F759C24BCEE4E00548DD0 /* iteractor */,
+				2F0F759B24BCEE3B00548DD0 /* router */,
+				2F0F759A24BCEE2B00548DD0 /* presenter */,
+				2F0F759924BCEE1C00548DD0 /* view */,
+			);
+			path = UserDisconnected;
+			sourceTree = "<group>";
+		};
+		2F0F759924BCEE1C00548DD0 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		2F0F759A24BCEE2B00548DD0 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		2F0F759B24BCEE3B00548DD0 /* router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		2F0F759C24BCEE4E00548DD0 /* iteractor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = iteractor;
+			sourceTree = "<group>";
+		};
+		2F0F759D24BCEE5A00548DD0 /* entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +216,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F0F759824BCEC2900548DD0 /* ReadME in Resources */,
 				2F0F757E24BCE44000548DD0 /* LaunchScreen.storyboard in Resources */,
 				2F0F757B24BCE44000548DD0 /* Assets.xcassets in Resources */,
 				2F0F757924BCE41E00548DD0 /* Main.storyboard in Resources */,
