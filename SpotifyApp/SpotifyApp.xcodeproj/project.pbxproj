@@ -24,6 +24,22 @@
 		2F0F757A24BCE44000548DD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F0F757D24BCE44000548DD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2F0F757F24BCE44000548DD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F0F758624BCE64C00548DD0 /* ProximaNova-RegularIt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-RegularIt.otf"; path = "../../../../Downloads/spotifyremake 3/spotifyremake/Resources/ProximaNova-RegularIt.otf"; sourceTree = "<group>"; };
+		2F0F758724BCE64C00548DD0 /* ProximaNovaCond-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNovaCond-Regular.otf"; path = "../../../../Downloads/spotifyremake 3/spotifyremake/Resources/ProximaNovaCond-Regular.otf"; sourceTree = "<group>"; };
+		2F0F758824BCE64C00548DD0 /* ProximaNova-BoldIt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-BoldIt.otf"; path = "../../../../Downloads/spotifyremake 3/spotifyremake/Resources/ProximaNova-BoldIt.otf"; sourceTree = "<group>"; };
+		2F0F758924BCE64C00548DD0 /* ProximaNova-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-Black.otf"; path = "../../../../Downloads/spotifyremake 3/spotifyremake/Resources/ProximaNova-Black.otf"; sourceTree = "<group>"; };
+		2F0F758A24BCE64C00548DD0 /* ProximaNova-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-Semibold.otf"; path = "../../../../Downloads/spotifyremake 3/spotifyremake/Resources/ProximaNova-Semibold.otf"; sourceTree = "<group>"; };
+		2F0F758B24BCE64C00548DD0 /* ProximaNova-SemiboldIt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-SemiboldIt.otf"; path = "../../../../Downloads/spotifyremake 3/spotifyremake/Resources/ProximaNova-SemiboldIt.otf"; sourceTree = "<group>"; };
+		2F0F758C24BCE64C00548DD0 /* ProximaNovaCond-RegularIt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNovaCond-RegularIt.otf"; path = "../../../../Downloads/spotifyremake 3/spotifyremake/Resources/ProximaNovaCond-RegularIt.otf"; sourceTree = "<group>"; };
+		2F0F758D24BCE64C00548DD0 /* ProximaNovaCond-SemiboldIt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNovaCond-SemiboldIt.otf"; path = "../../../../Downloads/spotifyremake 3/spotifyremake/Resources/ProximaNovaCond-SemiboldIt.otf"; sourceTree = "<group>"; };
+		2F0F758E24BCE64C00548DD0 /* ProximaNova-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-Bold.otf"; path = "../../../../Downloads/spotifyremake 3/spotifyremake/Resources/ProximaNova-Bold.otf"; sourceTree = "<group>"; };
+		2F0F758F24BCE64C00548DD0 /* ProximaNovaCond-LightIt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNovaCond-LightIt.otf"; path = "../../../../Downloads/spotifyremake 3/spotifyremake/Resources/ProximaNovaCond-LightIt.otf"; sourceTree = "<group>"; };
+		2F0F759024BCE64C00548DD0 /* ProximaNova-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-Light.otf"; path = "../../../../Downloads/spotifyremake 3/spotifyremake/Resources/ProximaNova-Light.otf"; sourceTree = "<group>"; };
+		2F0F759124BCE64C00548DD0 /* ProximaNovaCond-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNovaCond-Light.otf"; path = "../../../../Downloads/spotifyremake 3/spotifyremake/Resources/ProximaNovaCond-Light.otf"; sourceTree = "<group>"; };
+		2F0F759224BCE64C00548DD0 /* ProximaNovaCond-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNovaCond-Semibold.otf"; path = "../../../../Downloads/spotifyremake 3/spotifyremake/Resources/ProximaNovaCond-Semibold.otf"; sourceTree = "<group>"; };
+		2F0F759324BCE64D00548DD0 /* ProximaNova-Extrabld.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-Extrabld.otf"; path = "../../../../Downloads/spotifyremake 3/spotifyremake/Resources/ProximaNova-Extrabld.otf"; sourceTree = "<group>"; };
+		2F0F759424BCE64D00548DD0 /* ProximaNova-LightIt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-LightIt.otf"; path = "../../../../Downloads/spotifyremake 3/spotifyremake/Resources/ProximaNova-LightIt.otf"; sourceTree = "<group>"; };
+		2F0F759524BCE64D00548DD0 /* ProximaNova-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-Regular.otf"; path = "../../../../Downloads/spotifyremake 3/spotifyremake/Resources/ProximaNova-Regular.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +72,7 @@
 		2F0F757024BCE41E00548DD0 /* SpotifyApp */ = {
 			isa = PBXGroup;
 			children = (
+				2F0F758524BCE5A600548DD0 /* resource */,
 				2F0F757124BCE41E00548DD0 /* AppDelegate.swift */,
 				2F0F757324BCE41E00548DD0 /* SceneDelegate.swift */,
 				2F0F757524BCE41E00548DD0 /* ViewController.swift */,
@@ -65,6 +82,29 @@
 				2F0F757F24BCE44000548DD0 /* Info.plist */,
 			);
 			path = SpotifyApp;
+			sourceTree = "<group>";
+		};
+		2F0F758524BCE5A600548DD0 /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				2F0F758924BCE64C00548DD0 /* ProximaNova-Black.otf */,
+				2F0F758E24BCE64C00548DD0 /* ProximaNova-Bold.otf */,
+				2F0F758824BCE64C00548DD0 /* ProximaNova-BoldIt.otf */,
+				2F0F759324BCE64D00548DD0 /* ProximaNova-Extrabld.otf */,
+				2F0F759024BCE64C00548DD0 /* ProximaNova-Light.otf */,
+				2F0F759424BCE64D00548DD0 /* ProximaNova-LightIt.otf */,
+				2F0F759524BCE64D00548DD0 /* ProximaNova-Regular.otf */,
+				2F0F758624BCE64C00548DD0 /* ProximaNova-RegularIt.otf */,
+				2F0F758A24BCE64C00548DD0 /* ProximaNova-Semibold.otf */,
+				2F0F758B24BCE64C00548DD0 /* ProximaNova-SemiboldIt.otf */,
+				2F0F759124BCE64C00548DD0 /* ProximaNovaCond-Light.otf */,
+				2F0F758F24BCE64C00548DD0 /* ProximaNovaCond-LightIt.otf */,
+				2F0F758724BCE64C00548DD0 /* ProximaNovaCond-Regular.otf */,
+				2F0F758C24BCE64C00548DD0 /* ProximaNovaCond-RegularIt.otf */,
+				2F0F759224BCE64C00548DD0 /* ProximaNovaCond-Semibold.otf */,
+				2F0F758D24BCE64C00548DD0 /* ProximaNovaCond-SemiboldIt.otf */,
+			);
+			path = resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
