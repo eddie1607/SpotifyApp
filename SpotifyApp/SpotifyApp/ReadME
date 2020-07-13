@@ -10,7 +10,22 @@ utilizando arquitetura viper
 2- dentro do caso de uso definir os diretorios das 5 camadas
  view,presenter,router,inteactor,entity
  
-
+2.1 View  a view escolhida ser feita de maneira programatica dessa forma
+ - precisara ser definida no secedelegate
+ - desativada a storybord
+ - testado o carregameno da view programatica
+ - criar uma referencia para o presenter
+ 2.2 presenter
+ - definir  no diretorio presenter um protocol de defina as acoes  que serao implentadads por quem assinar esse protocolo
+ 
+ - esse protocolo deve ter uma referencia para  routers
+ 
+ 
+ # na view criar botao
+ #  atribuir autolayout usando linguagem apple visual format
+ # adicionar  itens a subview
+ # 
+ 
  
  
 

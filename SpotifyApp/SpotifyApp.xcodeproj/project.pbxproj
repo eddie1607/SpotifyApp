@@ -14,6 +14,16 @@
 		2F0F757B24BCE44000548DD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F0F757A24BCE44000548DD0 /* Assets.xcassets */; };
 		2F0F757E24BCE44000548DD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F0F757C24BCE44000548DD0 /* LaunchScreen.storyboard */; };
 		2F0F759824BCEC2900548DD0 /* ReadME in Resources */ = {isa = PBXBuildFile; fileRef = 2F0F759724BCEC2900548DD0 /* ReadME */; };
+		2F0F75A024BCF59300548DD0 /* UserDisconnectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0F759F24BCF59300548DD0 /* UserDisconnectedViewController.swift */; };
+		2F0F75A224BCF79A00548DD0 /* UserDisconnectedModuleInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0F75A124BCF79A00548DD0 /* UserDisconnectedModuleInterface.swift */; };
+		2F0F75A424BCF8A000548DD0 /* UserDisconnectedRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0F75A324BCF8A000548DD0 /* UserDisconnectedRouter.swift */; };
+		2F0F75A624BCFB9600548DD0 /* UserDisconnectedPresenter .swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0F75A524BCFB9600548DD0 /* UserDisconnectedPresenter .swift */; };
+		2F0F75AA24BD0D9F00548DD0 /* CreateAccountRouter .swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0F75A924BD0D9F00548DD0 /* CreateAccountRouter .swift */; };
+		2F0F75AC24BD0E0000548DD0 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0F75AB24BD0E0000548DD0 /* CreateAccountViewController.swift */; };
+		2F0F75B024BD165E00548DD0 /* SPTButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0F75AF24BD165E00548DD0 /* SPTButton.swift */; };
+		2F0F75B224BD169F00548DD0 /* SPTLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0F75B124BD169F00548DD0 /* SPTLabel.swift */; };
+		2F0F75B424BD16FB00548DD0 /* UIColor+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0F75B324BD16FB00548DD0 /* UIColor+Default.swift */; };
+		2F0F75B624BD174E00548DD0 /* UIView+Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0F75B524BD174E00548DD0 /* UIView+Constraint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +52,16 @@
 		2F0F759424BCE64D00548DD0 /* ProximaNova-LightIt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-LightIt.otf"; path = "../../../../Downloads/spotifyremake 3/spotifyremake/Resources/ProximaNova-LightIt.otf"; sourceTree = "<group>"; };
 		2F0F759524BCE64D00548DD0 /* ProximaNova-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-Regular.otf"; path = "../../../../Downloads/spotifyremake 3/spotifyremake/Resources/ProximaNova-Regular.otf"; sourceTree = "<group>"; };
 		2F0F759724BCEC2900548DD0 /* ReadME */ = {isa = PBXFileReference; lastKnownFileType = text; path = ReadME; sourceTree = "<group>"; };
+		2F0F759F24BCF59300548DD0 /* UserDisconnectedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDisconnectedViewController.swift; sourceTree = "<group>"; };
+		2F0F75A124BCF79A00548DD0 /* UserDisconnectedModuleInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDisconnectedModuleInterface.swift; sourceTree = "<group>"; };
+		2F0F75A324BCF8A000548DD0 /* UserDisconnectedRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDisconnectedRouter.swift; sourceTree = "<group>"; };
+		2F0F75A524BCFB9600548DD0 /* UserDisconnectedPresenter .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDisconnectedPresenter .swift"; sourceTree = "<group>"; };
+		2F0F75A924BD0D9F00548DD0 /* CreateAccountRouter .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CreateAccountRouter .swift"; sourceTree = "<group>"; };
+		2F0F75AB24BD0E0000548DD0 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		2F0F75AF24BD165E00548DD0 /* SPTButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPTButton.swift; sourceTree = "<group>"; };
+		2F0F75B124BD169F00548DD0 /* SPTLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPTLabel.swift; sourceTree = "<group>"; };
+		2F0F75B324BD16FB00548DD0 /* UIColor+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Default.swift"; sourceTree = "<group>"; };
+		2F0F75B524BD174E00548DD0 /* UIView+Constraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraint.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +94,8 @@
 		2F0F757024BCE41E00548DD0 /* SpotifyApp */ = {
 			isa = PBXGroup;
 			children = (
+				2F0F75AD24BD15E700548DD0 /* common */,
+				2F0F759E24BCF50700548DD0 /* CreateAccount */,
 				2F0F759624BCEBED00548DD0 /* UserDisconnected */,
 				2F0F758524BCE5A600548DD0 /* resource */,
 				2F0F757124BCE41E00548DD0 /* AppDelegate.swift */,
@@ -126,6 +148,7 @@
 		2F0F759924BCEE1C00548DD0 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				2F0F759F24BCF59300548DD0 /* UserDisconnectedViewController.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -133,6 +156,8 @@
 		2F0F759A24BCEE2B00548DD0 /* presenter */ = {
 			isa = PBXGroup;
 			children = (
+				2F0F75A124BCF79A00548DD0 /* UserDisconnectedModuleInterface.swift */,
+				2F0F75A524BCFB9600548DD0 /* UserDisconnectedPresenter .swift */,
 			);
 			path = presenter;
 			sourceTree = "<group>";
@@ -140,6 +165,7 @@
 		2F0F759B24BCEE3B00548DD0 /* router */ = {
 			isa = PBXGroup;
 			children = (
+				2F0F75A324BCF8A000548DD0 /* UserDisconnectedRouter.swift */,
 			);
 			path = router;
 			sourceTree = "<group>";
@@ -156,6 +182,50 @@
 			children = (
 			);
 			path = entity;
+			sourceTree = "<group>";
+		};
+		2F0F759E24BCF50700548DD0 /* CreateAccount */ = {
+			isa = PBXGroup;
+			children = (
+				2F0F75A824BD0D6200548DD0 /* router */,
+				2F0F75A724BD0D5400548DD0 /* view */,
+				2F0F75AB24BD0E0000548DD0 /* CreateAccountViewController.swift */,
+			);
+			path = CreateAccount;
+			sourceTree = "<group>";
+		};
+		2F0F75A724BD0D5400548DD0 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		2F0F75A824BD0D6200548DD0 /* router */ = {
+			isa = PBXGroup;
+			children = (
+				2F0F75A924BD0D9F00548DD0 /* CreateAccountRouter .swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		2F0F75AD24BD15E700548DD0 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				2F0F75AE24BD160800548DD0 /* view */,
+				2F0F75B324BD16FB00548DD0 /* UIColor+Default.swift */,
+				2F0F75B524BD174E00548DD0 /* UIView+Constraint.swift */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		2F0F75AE24BD160800548DD0 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				2F0F75AF24BD165E00548DD0 /* SPTButton.swift */,
+				2F0F75B124BD169F00548DD0 /* SPTLabel.swift */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,9 +300,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F0F75A224BCF79A00548DD0 /* UserDisconnectedModuleInterface.swift in Sources */,
+				2F0F75A024BCF59300548DD0 /* UserDisconnectedViewController.swift in Sources */,
+				2F0F75A424BCF8A000548DD0 /* UserDisconnectedRouter.swift in Sources */,
+				2F0F75B024BD165E00548DD0 /* SPTButton.swift in Sources */,
 				2F0F757624BCE41E00548DD0 /* ViewController.swift in Sources */,
+				2F0F75B424BD16FB00548DD0 /* UIColor+Default.swift in Sources */,
+				2F0F75B624BD174E00548DD0 /* UIView+Constraint.swift in Sources */,
 				2F0F757224BCE41E00548DD0 /* AppDelegate.swift in Sources */,
 				2F0F757424BCE41E00548DD0 /* SceneDelegate.swift in Sources */,
+				2F0F75AC24BD0E0000548DD0 /* CreateAccountViewController.swift in Sources */,
+				2F0F75A624BCFB9600548DD0 /* UserDisconnectedPresenter .swift in Sources */,
+				2F0F75AA24BD0D9F00548DD0 /* CreateAccountRouter .swift in Sources */,
+				2F0F75B224BD169F00548DD0 /* SPTLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
