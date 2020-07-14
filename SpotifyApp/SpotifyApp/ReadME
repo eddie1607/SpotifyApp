@@ -11,7 +11,7 @@ utilizando arquitetura viper
  view,presenter,router,inteactor,entity
  
 2.1 View  a view escolhida ser feita de maneira programatica dessa forma
- - precisara ser definida no secedelegate
+ - precisara ser definida no secedelegate (https://learnappmaking.com/scene-delegate-app-delegate-xcode-11-ios-13/)
  - desativada a storybord
  - testado o carregameno da view programatica
  - criar uma referencia para o presenter

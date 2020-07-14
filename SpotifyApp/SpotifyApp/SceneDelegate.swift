@@ -14,30 +14,33 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-         self.window = UIWindow(frame: UIScreen.main.bounds)
-         
-         let userDisconnectedPresenter = UserDisconnectedPresenter()
-                
-                let userDisconnectedRouter = UserDisconnectedRouter()
-                let createAccountRouter = CreateAccountRouter()
-                
-                userDisconnectedRouter.presenter = userDisconnectedPresenter
-                userDisconnectedRouter.createAccountRouter = createAccountRouter
-                
-                userDisconnectedPresenter.router = userDisconnectedRouter
-                
-                userDisconnectedRouter.presentUserDisconnectedFrom(window: window!)
-         
-         for family: String in UIFont.familyNames {
-             print("\(family)")
-             for names: String in UIFont.fontNames(forFamilyName: family) {
-                 print("\(names)")
-             }
-             
-         }
-         
-         self.window?.makeKeyAndVisible()
-        guard let _ = (scene as? UIWindowScene) else { return }
+      
+        //guard let _ = (scene as? UIWindowScene) else { return }
+        
+        if let windowScene = scene as? UIWindowScene {
+        self.window = UIWindow(windowScene: windowScene)
+              
+              let userDisconnectedPresenter = UserDisconnectedPresenter()
+                     
+                     let userDisconnectedRouter = UserDisconnectedRouter()
+                     let createAccountRouter = CreateAccountRouter()
+                     
+                     userDisconnectedRouter.presenter = userDisconnectedPresenter
+                     userDisconnectedRouter.createAccountRouter = createAccountRouter
+                     
+                     userDisconnectedPresenter.router = userDisconnectedRouter
+                     
+                     userDisconnectedRouter.presentUserDisconnectedFrom(window: window!)
+              
+              for family: String in UIFont.familyNames {
+                  print("\(family)")
+                  for names: String in UIFont.fontNames(forFamilyName: family) {
+                      print("\(names)")
+                  }
+                  
+              }
+        }
+              //self.window?.makeKeyAndVisible()
        
     }
 
