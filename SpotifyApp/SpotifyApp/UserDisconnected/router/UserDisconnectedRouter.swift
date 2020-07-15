@@ -10,18 +10,19 @@ import UIKit
 
 class UserDisconnectedRouter {
     
-    var presenter: UserDisconnectedModuleInterface!
+    var presenter: UserDisconnectedModuleInterface!///referencia para o presenter
     var createAccountRouter: CreateAccountRouter?
     
-    var navigation: UINavigationController?
+    var navigation: UINavigationController?// rota de navegacao
+    
     
     func presentUserDisconnectedFrom(window: UIWindow) {
-        let view = UserDisconnectedViewController()
+        let view = UserDisconnectedViewController()//// instancia a view que deve ser vista
         view.eventHandler = presenter
         
-        self.navigation = UINavigationController(rootViewController: view)
+        self.navigation = UINavigationController(rootViewController: view) /// diz que essa e a raiz
         self.navigation?.setNavigationBarHidden(true, animated: true)
-        window.rootViewController = navigation
+        window.rootViewController = navigation/// passuma arais
     }
     
     func presentCreateAccountInterface() {

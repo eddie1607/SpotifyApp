@@ -11,9 +11,9 @@ import UIKit
 
 extension UIView {
     
-    func constraint(pattern: String, view: UIView...) {
+    func constraint(pattern: String, views: UIView...) {
         var mViews: [String : UIView] = [:]
-        for(index, view) in view.enumerated() {
+        for(index, view) in views.enumerated() {
             view.translatesAutoresizingMaskIntoConstraints = false
             mViews["v\(index)"] = view
         }

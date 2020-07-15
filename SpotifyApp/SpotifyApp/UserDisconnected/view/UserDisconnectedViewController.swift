@@ -9,8 +9,9 @@
 import UIKit
 
 class UserDisconnectedViewController: UIViewController {
+    
 
-    var eventHandler: UserDisconnectedModuleInterface?
+    var eventHandler: UserDisconnectedModuleInterface?/////// referencia pra presenter
     
     let btnCreateAccount: SPTButton = {
         let btn = SPTButton()
@@ -39,11 +40,11 @@ class UserDisconnectedViewController: UIViewController {
         view.addSubview(btnLogin)
         view.addSubview(alreadyAUser)
         
-        view.constraint(pattern: "H:|-32-[v0]-32-|", view: btnCreateAccount)
-        view.constraint(pattern: "H:|-32-[v0]-32-|", view: btnLogin)
-        view.constraint(pattern: "H:|-32-[v0]-32-|", view: alreadyAUser)
+        view.constraint(pattern: "H:|-32-[v0]-32-|", views: btnCreateAccount)
+        view.constraint(pattern: "H:|-32-[v0]-32-|", views: btnLogin)
+        view.constraint(pattern: "H:|-32-[v0]-32-|", views: alreadyAUser)
         
-        view.constraint(pattern: "V:[v0]-12-[v1]-3-[v2]-36-|", view: btnCreateAccount, alreadyAUser, btnLogin)
+        view.constraint(pattern: "V:[v0]-12-[v1]-3-[v2]-36-|", views: btnCreateAccount, alreadyAUser, btnLogin)
         
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }

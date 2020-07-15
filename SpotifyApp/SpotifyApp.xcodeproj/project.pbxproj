@@ -24,6 +24,12 @@
 		2F0F75B224BD169F00548DD0 /* SPTLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0F75B124BD169F00548DD0 /* SPTLabel.swift */; };
 		2F0F75B424BD16FB00548DD0 /* UIColor+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0F75B324BD16FB00548DD0 /* UIColor+Default.swift */; };
 		2F0F75B624BD174E00548DD0 /* UIView+Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0F75B524BD174E00548DD0 /* UIView+Constraint.swift */; };
+		2F0F75B824BE5A1D00548DD0 /* HighlightCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0F75B724BE5A1D00548DD0 /* HighlightCollectionView.swift */; };
+		2F0F75BA24BE5D7D00548DD0 /* HighlightCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0F75B924BE5D7D00548DD0 /* HighlightCollectionCell.swift */; };
+		2F0F75BC24BE5F5E00548DD0 /* UserDisconnectedInterface .swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0F75BB24BE5F5E00548DD0 /* UserDisconnectedInterface .swift */; };
+		2F0F75BE24BE5FE800548DD0 /* HighlightItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0F75BD24BE5FE800548DD0 /* HighlightItem.swift */; };
+		2F0F75C124BE60A700548DD0 /* UserDisconnectedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0F75C024BE60A700548DD0 /* UserDisconnectedManager.swift */; };
+		2F0F75C524BE622600548DD0 /* UserDisconnectedInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0F75C424BE622500548DD0 /* UserDisconnectedInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +68,12 @@
 		2F0F75B124BD169F00548DD0 /* SPTLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPTLabel.swift; sourceTree = "<group>"; };
 		2F0F75B324BD16FB00548DD0 /* UIColor+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Default.swift"; sourceTree = "<group>"; };
 		2F0F75B524BD174E00548DD0 /* UIView+Constraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraint.swift"; sourceTree = "<group>"; };
+		2F0F75B724BE5A1D00548DD0 /* HighlightCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightCollectionView.swift; sourceTree = "<group>"; };
+		2F0F75B924BE5D7D00548DD0 /* HighlightCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightCollectionCell.swift; sourceTree = "<group>"; };
+		2F0F75BB24BE5F5E00548DD0 /* UserDisconnectedInterface .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDisconnectedInterface .swift"; sourceTree = "<group>"; };
+		2F0F75BD24BE5FE800548DD0 /* HighlightItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightItem.swift; sourceTree = "<group>"; };
+		2F0F75C024BE60A700548DD0 /* UserDisconnectedManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDisconnectedManager.swift; sourceTree = "<group>"; };
+		2F0F75C424BE622500548DD0 /* UserDisconnectedInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDisconnectedInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,8 +148,9 @@
 		2F0F759624BCEBED00548DD0 /* UserDisconnected */ = {
 			isa = PBXGroup;
 			children = (
+				2F0F75BF24BE608100548DD0 /* manager */,
 				2F0F759D24BCEE5A00548DD0 /* entity */,
-				2F0F759C24BCEE4E00548DD0 /* iteractor */,
+				2F0F759C24BCEE4E00548DD0 /* interactor */,
 				2F0F759B24BCEE3B00548DD0 /* router */,
 				2F0F759A24BCEE2B00548DD0 /* presenter */,
 				2F0F759924BCEE1C00548DD0 /* view */,
@@ -149,6 +162,9 @@
 			isa = PBXGroup;
 			children = (
 				2F0F759F24BCF59300548DD0 /* UserDisconnectedViewController.swift */,
+				2F0F75B724BE5A1D00548DD0 /* HighlightCollectionView.swift */,
+				2F0F75B924BE5D7D00548DD0 /* HighlightCollectionCell.swift */,
+				2F0F75BB24BE5F5E00548DD0 /* UserDisconnectedInterface .swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -170,16 +186,18 @@
 			path = router;
 			sourceTree = "<group>";
 		};
-		2F0F759C24BCEE4E00548DD0 /* iteractor */ = {
+		2F0F759C24BCEE4E00548DD0 /* interactor */ = {
 			isa = PBXGroup;
 			children = (
+				2F0F75C424BE622500548DD0 /* UserDisconnectedInteractor.swift */,
 			);
-			path = iteractor;
+			path = interactor;
 			sourceTree = "<group>";
 		};
 		2F0F759D24BCEE5A00548DD0 /* entity */ = {
 			isa = PBXGroup;
 			children = (
+				2F0F75BD24BE5FE800548DD0 /* HighlightItem.swift */,
 			);
 			path = entity;
 			sourceTree = "<group>";
@@ -226,6 +244,14 @@
 				2F0F75B124BD169F00548DD0 /* SPTLabel.swift */,
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		2F0F75BF24BE608100548DD0 /* manager */ = {
+			isa = PBXGroup;
+			children = (
+				2F0F75C024BE60A700548DD0 /* UserDisconnectedManager.swift */,
+			);
+			path = manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,15 +329,21 @@
 				2F0F75A224BCF79A00548DD0 /* UserDisconnectedModuleInterface.swift in Sources */,
 				2F0F75A024BCF59300548DD0 /* UserDisconnectedViewController.swift in Sources */,
 				2F0F75A424BCF8A000548DD0 /* UserDisconnectedRouter.swift in Sources */,
+				2F0F75C524BE622600548DD0 /* UserDisconnectedInteractor.swift in Sources */,
+				2F0F75B824BE5A1D00548DD0 /* HighlightCollectionView.swift in Sources */,
 				2F0F75B024BD165E00548DD0 /* SPTButton.swift in Sources */,
 				2F0F757624BCE41E00548DD0 /* ViewController.swift in Sources */,
 				2F0F75B424BD16FB00548DD0 /* UIColor+Default.swift in Sources */,
+				2F0F75BA24BE5D7D00548DD0 /* HighlightCollectionCell.swift in Sources */,
 				2F0F75B624BD174E00548DD0 /* UIView+Constraint.swift in Sources */,
 				2F0F757224BCE41E00548DD0 /* AppDelegate.swift in Sources */,
 				2F0F757424BCE41E00548DD0 /* SceneDelegate.swift in Sources */,
 				2F0F75AC24BD0E0000548DD0 /* CreateAccountViewController.swift in Sources */,
+				2F0F75BC24BE5F5E00548DD0 /* UserDisconnectedInterface .swift in Sources */,
 				2F0F75A624BCFB9600548DD0 /* UserDisconnectedPresenter .swift in Sources */,
 				2F0F75AA24BD0D9F00548DD0 /* CreateAccountRouter .swift in Sources */,
+				2F0F75C124BE60A700548DD0 /* UserDisconnectedManager.swift in Sources */,
+				2F0F75BE24BE5FE800548DD0 /* HighlightItem.swift in Sources */,
 				2F0F75B224BD169F00548DD0 /* SPTLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
