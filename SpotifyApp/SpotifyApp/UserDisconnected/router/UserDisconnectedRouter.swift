@@ -12,13 +12,14 @@ class UserDisconnectedRouter {
     
     var presenter: UserDisconnectedModuleInterface!///referencia para o presenter
     var createAccountRouter: CreateAccountRouter?
+    var loginUserRouter: LoginUserRouter?
     
     var navigation: UINavigationController?// rota de navegacao
     
     
-    func presentUserDisconnectedFrom(window: UIWindow) {
-        let view = UserDisconnectedViewController()//// instancia a view que deve ser vista
-        view.eventHandler = presenter
+    func presentUserDisconnectedFrom(window: UIWindow, view: UIViewController) {
+        //let view = UserDisconnectedViewController()//// instancia a view que deve ser vista
+      //  view.eventHandler = presenter
         
         self.navigation = UINavigationController(rootViewController: view) /// diz que essa e a raiz
         self.navigation?.setNavigationBarHidden(true, animated: true)
@@ -27,6 +28,10 @@ class UserDisconnectedRouter {
     
     func presentCreateAccountInterface() {
         createAccountRouter?.presentCreateAccountFrom(backView: navigation!)
+    }
+    
+    func presentLoginUserInterface(){
+        loginUserRouter?.presentLoginUserFrom(backView: navigation!)
     }
  
 }

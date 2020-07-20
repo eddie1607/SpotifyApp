@@ -9,12 +9,12 @@
 import UIKit
 class HighlightCollectionCell: UICollectionViewCell{
         
-        let lblTitle: SPTLabel = {
+        let lblTitle: SPTLabel = { ////  utiliza uma label padrao ///
             let lbl = SPTLabel()
             return lbl
         }()
         
-        let lblDesc: SPTLabel = {
+        let lblDesc: SPTLabel = { ////
             let lbl = SPTLabel()
             lbl.numberOfLines = 2
             return lbl
@@ -27,6 +27,7 @@ class HighlightCollectionCell: UICollectionViewCell{
             addSubview(lblDesc)
             backgroundColor = .clear
             
+            //// aplicacaoa do autolayout
             constraint(pattern: "H:|-32-[v0]-32-|", views: lblTitle)
             constraint(pattern: "H:|-32-[v0]-32-|", views: lblDesc)
             

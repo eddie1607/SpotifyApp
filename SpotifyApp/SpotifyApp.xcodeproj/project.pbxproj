@@ -30,6 +30,14 @@
 		2F0F75BE24BE5FE800548DD0 /* HighlightItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0F75BD24BE5FE800548DD0 /* HighlightItem.swift */; };
 		2F0F75C124BE60A700548DD0 /* UserDisconnectedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0F75C024BE60A700548DD0 /* UserDisconnectedManager.swift */; };
 		2F0F75C524BE622600548DD0 /* UserDisconnectedInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0F75C424BE622500548DD0 /* UserDisconnectedInteractor.swift */; };
+		2F51F0AA24C10C53002A62FC /* intro.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2F0F75C624BF69DA00548DD0 /* intro.mp4 */; };
+		2F51F0B124C21739002A62FC /* SPTTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F51F0B024C21739002A62FC /* SPTTextField.swift */; };
+		2F51F0B324C2273C002A62FC /* LoginUserInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F51F0B224C2273C002A62FC /* LoginUserInterface.swift */; };
+		2F51F0B524C227EE002A62FC /* LoginUserInteractorImput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F51F0B424C227EE002A62FC /* LoginUserInteractorImput.swift */; };
+		2F51F0B724C228B9002A62FC /* LoginUserModuleInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F51F0B624C228B9002A62FC /* LoginUserModuleInterface.swift */; };
+		2F51F0B924C2295C002A62FC /* LoginUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F51F0B824C2295C002A62FC /* LoginUserViewController.swift */; };
+		2F51F0BD24C293AC002A62FC /* LoginUserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F51F0BC24C293AC002A62FC /* LoginUserPresenter.swift */; };
+		2F51F0C124C486AE002A62FC /* LoginUserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F51F0C024C486AE002A62FC /* LoginUserRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +82,14 @@
 		2F0F75BD24BE5FE800548DD0 /* HighlightItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightItem.swift; sourceTree = "<group>"; };
 		2F0F75C024BE60A700548DD0 /* UserDisconnectedManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDisconnectedManager.swift; sourceTree = "<group>"; };
 		2F0F75C424BE622500548DD0 /* UserDisconnectedInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDisconnectedInteractor.swift; sourceTree = "<group>"; };
+		2F0F75C624BF69DA00548DD0 /* intro.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = intro.mp4; sourceTree = "<group>"; };
+		2F51F0B024C21739002A62FC /* SPTTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPTTextField.swift; sourceTree = "<group>"; };
+		2F51F0B224C2273C002A62FC /* LoginUserInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserInterface.swift; sourceTree = "<group>"; };
+		2F51F0B424C227EE002A62FC /* LoginUserInteractorImput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserInteractorImput.swift; sourceTree = "<group>"; };
+		2F51F0B624C228B9002A62FC /* LoginUserModuleInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserModuleInterface.swift; sourceTree = "<group>"; };
+		2F51F0B824C2295C002A62FC /* LoginUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserViewController.swift; sourceTree = "<group>"; };
+		2F51F0BC24C293AC002A62FC /* LoginUserPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserPresenter.swift; sourceTree = "<group>"; };
+		2F51F0C024C486AE002A62FC /* LoginUserRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				2F0F75AD24BD15E700548DD0 /* common */,
+				2F51F0AB24C214B9002A62FC /* LoginUser */,
 				2F0F759E24BCF50700548DD0 /* CreateAccount */,
 				2F0F759624BCEBED00548DD0 /* UserDisconnected */,
 				2F0F758524BCE5A600548DD0 /* resource */,
@@ -114,6 +131,7 @@
 				2F0F757324BCE41E00548DD0 /* SceneDelegate.swift */,
 				2F0F757524BCE41E00548DD0 /* ViewController.swift */,
 				2F0F757724BCE41E00548DD0 /* Main.storyboard */,
+				2F0F75C624BF69DA00548DD0 /* intro.mp4 */,
 				2F0F757A24BCE44000548DD0 /* Assets.xcassets */,
 				2F0F757C24BCE44000548DD0 /* LaunchScreen.storyboard */,
 				2F0F757F24BCE44000548DD0 /* Info.plist */,
@@ -242,6 +260,7 @@
 			children = (
 				2F0F75AF24BD165E00548DD0 /* SPTButton.swift */,
 				2F0F75B124BD169F00548DD0 /* SPTLabel.swift */,
+				2F51F0B024C21739002A62FC /* SPTTextField.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -252,6 +271,51 @@
 				2F0F75C024BE60A700548DD0 /* UserDisconnectedManager.swift */,
 			);
 			path = manager;
+			sourceTree = "<group>";
+		};
+		2F51F0AB24C214B9002A62FC /* LoginUser */ = {
+			isa = PBXGroup;
+			children = (
+				2F51F0AF24C215D6002A62FC /* presenter */,
+				2F51F0AE24C215C9002A62FC /* view */,
+				2F51F0AD24C215B1002A62FC /* interactor */,
+				2F51F0AC24C215A1002A62FC /* router */,
+			);
+			path = LoginUser;
+			sourceTree = "<group>";
+		};
+		2F51F0AC24C215A1002A62FC /* router */ = {
+			isa = PBXGroup;
+			children = (
+				2F51F0C024C486AE002A62FC /* LoginUserRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		2F51F0AD24C215B1002A62FC /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+				2F51F0B424C227EE002A62FC /* LoginUserInteractorImput.swift */,
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		2F51F0AE24C215C9002A62FC /* view */ = {
+			isa = PBXGroup;
+			children = (
+				2F51F0B224C2273C002A62FC /* LoginUserInterface.swift */,
+				2F51F0B824C2295C002A62FC /* LoginUserViewController.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		2F51F0AF24C215D6002A62FC /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				2F51F0B624C228B9002A62FC /* LoginUserModuleInterface.swift */,
+				2F51F0BC24C293AC002A62FC /* LoginUserPresenter.swift */,
+			);
+			path = presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,6 +376,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F51F0AA24C10C53002A62FC /* intro.mp4 in Resources */,
 				2F0F759824BCEC2900548DD0 /* ReadME in Resources */,
 				2F0F757E24BCE44000548DD0 /* LaunchScreen.storyboard in Resources */,
 				2F0F757B24BCE44000548DD0 /* Assets.xcassets in Resources */,
@@ -333,16 +398,23 @@
 				2F0F75B824BE5A1D00548DD0 /* HighlightCollectionView.swift in Sources */,
 				2F0F75B024BD165E00548DD0 /* SPTButton.swift in Sources */,
 				2F0F757624BCE41E00548DD0 /* ViewController.swift in Sources */,
+				2F51F0B924C2295C002A62FC /* LoginUserViewController.swift in Sources */,
+				2F51F0B324C2273C002A62FC /* LoginUserInterface.swift in Sources */,
+				2F51F0C124C486AE002A62FC /* LoginUserRouter.swift in Sources */,
 				2F0F75B424BD16FB00548DD0 /* UIColor+Default.swift in Sources */,
 				2F0F75BA24BE5D7D00548DD0 /* HighlightCollectionCell.swift in Sources */,
 				2F0F75B624BD174E00548DD0 /* UIView+Constraint.swift in Sources */,
 				2F0F757224BCE41E00548DD0 /* AppDelegate.swift in Sources */,
 				2F0F757424BCE41E00548DD0 /* SceneDelegate.swift in Sources */,
 				2F0F75AC24BD0E0000548DD0 /* CreateAccountViewController.swift in Sources */,
+				2F51F0BD24C293AC002A62FC /* LoginUserPresenter.swift in Sources */,
 				2F0F75BC24BE5F5E00548DD0 /* UserDisconnectedInterface .swift in Sources */,
 				2F0F75A624BCFB9600548DD0 /* UserDisconnectedPresenter .swift in Sources */,
+				2F51F0B724C228B9002A62FC /* LoginUserModuleInterface.swift in Sources */,
 				2F0F75AA24BD0D9F00548DD0 /* CreateAccountRouter .swift in Sources */,
+				2F51F0B524C227EE002A62FC /* LoginUserInteractorImput.swift in Sources */,
 				2F0F75C124BE60A700548DD0 /* UserDisconnectedManager.swift in Sources */,
+				2F51F0B124C21739002A62FC /* SPTTextField.swift in Sources */,
 				2F0F75BE24BE5FE800548DD0 /* HighlightItem.swift in Sources */,
 				2F0F75B224BD169F00548DD0 /* SPTLabel.swift in Sources */,
 			);

@@ -15,22 +15,49 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
       
-        //guard let _ = (scene as? UIWindowScene) else { return }
+       // guard let _ = (scene as? UIWindowScene) else { return }
         
         if let windowScene = scene as? UIWindowScene {
+            UITextField.appearance().tintColor = UIColor.SPT.green /// colaca uma cor no cursor
         self.window = UIWindow(windowScene: windowScene)
-              
-              let userDisconnectedPresenter = UserDisconnectedPresenter()
-                     
-                     let userDisconnectedRouter = UserDisconnectedRouter()
-                     let createAccountRouter = CreateAccountRouter()
-                     
-                     userDisconnectedRouter.presenter = userDisconnectedPresenter
-                     userDisconnectedRouter.createAccountRouter = createAccountRouter
-                     
-                     userDisconnectedPresenter.router = userDisconnectedRouter
-                     
-                     userDisconnectedRouter.presentUserDisconnectedFrom(window: window!)
+            
+            /// crinado as instanncias
+
+           // view
+            let view = UserDisconnectedViewController()
+            
+            // presenter
+            let userDisconnectedPresenter = UserDisconnectedPresenter()
+            let loginUserPresenter = LoginUserPresenter()
+            
+            // router
+            let userDisconnectedRouter = UserDisconnectedRouter()
+            let createAccountRouter = CreateAccountRouter()
+            let loginUserRouter = LoginUserRouter()
+            
+            // interactor
+            let userDisconnectedInteractor = UserDisconnectedInteractor()
+            let loginUserInteractor = LoginUserInteractor()
+            
+            // manager
+            let userDisconnectedManager = UserDisconnectedManager()
+            
+            userDisconnectedRouter.presenter = userDisconnectedPresenter
+            userDisconnectedRouter.createAccountRouter = createAccountRouter
+            userDisconnectedRouter.loginUserRouter = loginUserRouter
+            loginUserRouter.presenter = loginUserPresenter
+            
+            userDisconnectedPresenter.router = userDisconnectedRouter
+            userDisconnectedPresenter.view = view
+            userDisconnectedPresenter.interactor = userDisconnectedInteractor
+            loginUserPresenter.interactor = loginUserInteractor
+            
+            view.eventHandler = userDisconnectedPresenter
+            
+            userDisconnectedInteractor.presenter = userDisconnectedPresenter
+            userDisconnectedInteractor.manager = userDisconnectedManager
+            
+            userDisconnectedRouter.presentUserDisconnectedFrom(window: window!, view: view)
               
               for family: String in UIFont.familyNames {
                   print("\(family)")
@@ -40,7 +67,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                   
               }
         }
-              //self.window?.makeKeyAndVisible()
+            self.window?.makeKeyAndVisible()
        
     }
 
