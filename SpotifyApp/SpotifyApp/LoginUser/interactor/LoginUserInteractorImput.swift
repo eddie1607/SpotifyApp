@@ -18,7 +18,9 @@ class LoginUserInteractor: LoginUserInteractorInput{
     var manager: LoginUserManager?
     
     func findUser(by name: String, password: String) {
+
         let user = manager?.findUser(by: name, password: password) // busca no maanager  passanaado  esse nome e essa senha
+
             presenter?.loginResponse(loginUser: user)
     }
     
