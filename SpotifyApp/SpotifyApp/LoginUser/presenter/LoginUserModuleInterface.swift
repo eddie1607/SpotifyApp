@@ -20,6 +20,8 @@ protocol LoginUserModuleInterface{
     
     func forgotPasswdAction()
     
+    func loginResponse(loginUser: LoginUser?)
+    
     
 }
 

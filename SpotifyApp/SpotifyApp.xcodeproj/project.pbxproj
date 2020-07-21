@@ -30,6 +30,8 @@
 		2F0F75BE24BE5FE800548DD0 /* HighlightItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0F75BD24BE5FE800548DD0 /* HighlightItem.swift */; };
 		2F0F75C124BE60A700548DD0 /* UserDisconnectedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0F75C024BE60A700548DD0 /* UserDisconnectedManager.swift */; };
 		2F0F75C524BE622600548DD0 /* UserDisconnectedInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0F75C424BE622500548DD0 /* UserDisconnectedInteractor.swift */; };
+		2F268D5B24C6097C0033F2F7 /* LoginUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F268D5A24C6097C0033F2F7 /* LoginUser.swift */; };
+		2F268D5E24C611D20033F2F7 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F268D5D24C611D20033F2F7 /* LoginManager.swift */; };
 		2F51F0AA24C10C53002A62FC /* intro.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2F0F75C624BF69DA00548DD0 /* intro.mp4 */; };
 		2F51F0B124C21739002A62FC /* SPTTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F51F0B024C21739002A62FC /* SPTTextField.swift */; };
 		2F51F0B324C2273C002A62FC /* LoginUserInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F51F0B224C2273C002A62FC /* LoginUserInterface.swift */; };
@@ -83,6 +85,8 @@
 		2F0F75C024BE60A700548DD0 /* UserDisconnectedManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDisconnectedManager.swift; sourceTree = "<group>"; };
 		2F0F75C424BE622500548DD0 /* UserDisconnectedInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDisconnectedInteractor.swift; sourceTree = "<group>"; };
 		2F0F75C624BF69DA00548DD0 /* intro.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = intro.mp4; sourceTree = "<group>"; };
+		2F268D5A24C6097C0033F2F7 /* LoginUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUser.swift; sourceTree = "<group>"; };
+		2F268D5D24C611D20033F2F7 /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		2F51F0B024C21739002A62FC /* SPTTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPTTextField.swift; sourceTree = "<group>"; };
 		2F51F0B224C2273C002A62FC /* LoginUserInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserInterface.swift; sourceTree = "<group>"; };
 		2F51F0B424C227EE002A62FC /* LoginUserInteractorImput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserInteractorImput.swift; sourceTree = "<group>"; };
@@ -273,9 +277,27 @@
 			path = manager;
 			sourceTree = "<group>";
 		};
+		2F268D5924C6078E0033F2F7 /* entity */ = {
+			isa = PBXGroup;
+			children = (
+				2F268D5A24C6097C0033F2F7 /* LoginUser.swift */,
+			);
+			path = entity;
+			sourceTree = "<group>";
+		};
+		2F268D5C24C610F40033F2F7 /* manager */ = {
+			isa = PBXGroup;
+			children = (
+				2F268D5D24C611D20033F2F7 /* LoginManager.swift */,
+			);
+			path = manager;
+			sourceTree = "<group>";
+		};
 		2F51F0AB24C214B9002A62FC /* LoginUser */ = {
 			isa = PBXGroup;
 			children = (
+				2F268D5C24C610F40033F2F7 /* manager */,
+				2F268D5924C6078E0033F2F7 /* entity */,
 				2F51F0AF24C215D6002A62FC /* presenter */,
 				2F51F0AE24C215C9002A62FC /* view */,
 				2F51F0AD24C215B1002A62FC /* interactor */,
@@ -394,11 +416,13 @@
 				2F0F75A224BCF79A00548DD0 /* UserDisconnectedModuleInterface.swift in Sources */,
 				2F0F75A024BCF59300548DD0 /* UserDisconnectedViewController.swift in Sources */,
 				2F0F75A424BCF8A000548DD0 /* UserDisconnectedRouter.swift in Sources */,
+				2F268D5B24C6097C0033F2F7 /* LoginUser.swift in Sources */,
 				2F0F75C524BE622600548DD0 /* UserDisconnectedInteractor.swift in Sources */,
 				2F0F75B824BE5A1D00548DD0 /* HighlightCollectionView.swift in Sources */,
 				2F0F75B024BD165E00548DD0 /* SPTButton.swift in Sources */,
 				2F0F757624BCE41E00548DD0 /* ViewController.swift in Sources */,
 				2F51F0B924C2295C002A62FC /* LoginUserViewController.swift in Sources */,
+				2F268D5E24C611D20033F2F7 /* LoginManager.swift in Sources */,
 				2F51F0B324C2273C002A62FC /* LoginUserInterface.swift in Sources */,
 				2F51F0C124C486AE002A62FC /* LoginUserRouter.swift in Sources */,
 				2F0F75B424BD16FB00548DD0 /* UIColor+Default.swift in Sources */,
