@@ -68,8 +68,12 @@ class LoginUserViewController: UIViewController, LoginUserInterface{
     func loginFailed(message: String) {
         print(message)
        }
+    
+    //// cada vez que entrar com os dados  e username e senha  eles devem ser guardados
     @objc func loginDidTapped(){
-        
+        //// usa o contexto de guardlet para poder usar as variaveis fora do contexto
+        guard let email = txtEmail.text, let password = txtPasswd.text else {return}
+        eventHandler?.login(email: email, passwd: password)/// presenter  executa 
     }
     
 

@@ -71,6 +71,7 @@ Caso de uso LoginUser
  -view
  -interactor
  -router
+ - entity   entidade responsavel pela modelo de dados utilizado nesse  caso de uso
  
  comecar ajustando os commons
   customizando componentes para  serm reutilizados sno caso  uma textfield
@@ -86,7 +87,12 @@ Caso de uso LoginUser
  - no presenter exixte uma  referencia para o router
  -chamase a rota  correspondente
   login instancia uma viewcontroller
-  - sao aplicado as animacoes de  transicao 
+  - sao aplicado as animacoes de  transicao
+  =====
+   entity
+  criar a entidde  que sera  utilizada p
+  
+  interactor
  
  
  
