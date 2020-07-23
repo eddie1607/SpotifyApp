@@ -8,13 +8,61 @@
 
 import UIKit
 
+@available(iOS 13.0, *)
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+ var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+                UITextField.appearance().tintColor = UIColor.SPT.green
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        
+        // view
+        let view = UserDisconnectedViewController()
+        
+        // presenter
+        let userDisconnectedPresenter = UserDisconnectedPresenter()
+        let loginUserPresenter = LoginUserPresenter()
+        
+        // router
+        let userDisconnectedRouter = UserDisconnectedRouter()
+        let createAccountRouter = CreateAccountRouter()
+        let loginUserRouter = LoginUserRouter()
+        
+        // interactor
+        let userDisconnectedInteractor = UserDisconnectedInteractor()
+        let loginUserInteractor = LoginUserInteractor()
+        
+        // manager
+        let userDisconnectedManager = UserDisconnectedManager()
+        
+        userDisconnectedRouter.presenter = userDisconnectedPresenter
+        userDisconnectedRouter.createAccountRouter = createAccountRouter
+        userDisconnectedRouter.loginUserRouter = loginUserRouter
+        loginUserRouter.presenter = loginUserPresenter
+        
+        userDisconnectedPresenter.router = userDisconnectedRouter
+        userDisconnectedPresenter.view = view
+        userDisconnectedPresenter.interactor = userDisconnectedInteractor
+        loginUserPresenter.interactor = loginUserInteractor
+        
+        view.eventHandler = userDisconnectedPresenter
+        
+        userDisconnectedInteractor.presenter = userDisconnectedPresenter
+        userDisconnectedInteractor.manager = userDisconnectedManager
+        
+        userDisconnectedRouter.presentUserDisconnectedFrom(window: window!, view: view)
+        
+        for family: String in UIFont.familyNames {
+            print("\(family)")
+            for names: String in UIFont.fontNames(forFamilyName: family) {
+                print("\(names)")
+            }
+            
+        }
+        
+        self.window?.makeKeyAndVisible()
         
         return true
     }

@@ -95,6 +95,24 @@ Caso de uso LoginUser
   interactor
  
  
+ ++++ Uso do sdk spotify
+ https://developer.spotify.com/documentation/ios/quick-start/
+ https://www.devmedia.com.br/cocoapods-gerenciando-bibliotecas-no-xcode/29642
+ https://trailhead.salesforce.com/pt-BR/content/learn/modules/mobile_sdk_native_ios/mobilesdk_ios_cocoapods
+ instalacao do cocoapods no projeto
+ 1- sudo gem install cocoapods
+ 2-pod setup
+ 3-pod init  (cria o arquivo pod file)
+ 4- abra o podfile e edite o arquivo ex:
+ use_frameworks!
+
+ target 'TutorialCocoaPods' do
+   pod 'DeviceKit', '~> 0.3.1'
+ 5-pod install na raiz do projeto
+ 6 abrir o xco
+ 
+ 
+ 
  
  
 
