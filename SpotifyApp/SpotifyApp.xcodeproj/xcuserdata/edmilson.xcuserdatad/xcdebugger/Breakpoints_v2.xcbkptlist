@@ -52,5 +52,149 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FE5E922A-0ABD-4D1C-BD1C-C31FE261B6C4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SpotifyApp/LoginUser/presenter/LoginUserPresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "access()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "68EAC549-15A6-46B9-8AD0-F25D6FC81648"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SpotifyApp/LoginUser/presenter/LoginUserPresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "access()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "68EAC549-15A6-46B9-8AD0-F25D6FC81648 - 38fc7ee620af1377"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SpotifyApp.LoginUserPresenter.access() -&gt; ()"
+                  moduleName = "SpotifyApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/edmilson/SpotifyApp/SpotifyApp/SpotifyApp/LoginUser/presenter/LoginUserPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "248">
+               </Location>
+               <Location
+                  uuid = "68EAC549-15A6-46B9-8AD0-F25D6FC81648 - 2874c167e59dac48"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; Swift.Optional&lt;__C.SPTSessionManager&gt; in SpotifyApp.LoginUserPresenter.access() -&gt; ()"
+                  moduleName = "SpotifyApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/edmilson/SpotifyApp/SpotifyApp/SpotifyApp/LoginUser/presenter/LoginUserPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "89"
+                  endingLineNumber = "89"
+                  offsetFromSymbolStart = "56">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "114F4BA7-5714-4B3D-9216-AA57331D026D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SpotifyApp/LoginUser/presenter/LoginUserPresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
+            landmarkName = "access()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1E9653D0-42D0-40EB-9BA7-F8DCBBB27F91"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SpotifyApp/LoginUser/presenter/LoginUserPresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
+            landmarkName = "loginProcess()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1E9653D0-42D0-40EB-9BA7-F8DCBBB27F91 - ff23fa7b74d142e3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SpotifyApp.LoginUserPresenter.loginProcess() -&gt; ()"
+                  moduleName = "SpotifyApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/edmilson/SpotifyApp/SpotifyApp/SpotifyApp/LoginUser/presenter/LoginUserPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "113"
+                  endingLineNumber = "113"
+                  offsetFromSymbolStart = "84">
+               </Location>
+               <Location
+                  uuid = "1E9653D0-42D0-40EB-9BA7-F8DCBBB27F91 - a3f186b76962727f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; __C.SPTAppRemote in SpotifyApp.LoginUserPresenter.loginProcess() -&gt; ()"
+                  moduleName = "SpotifyApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/edmilson/SpotifyApp/SpotifyApp/SpotifyApp/LoginUser/presenter/LoginUserPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "114"
+                  endingLineNumber = "114"
+                  offsetFromSymbolStart = "56">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "77F743EF-5C8B-4085-BA6E-2D43071F412C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SpotifyApp/UserDisconnected/view/UserDisconnectedViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
+            landmarkName = "viewDidAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

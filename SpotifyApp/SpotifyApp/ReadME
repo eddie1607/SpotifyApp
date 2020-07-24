@@ -97,6 +97,12 @@ Caso de uso LoginUser
  
  ++++ Uso do sdk spotify
  https://developer.spotify.com/documentation/ios/quick-start/
+ documentacao da API
+ https://spotify.github.io/ios-sdk/html/
+ painel de controle
+ https://developer.spotify.com/dashboard/
+ 
+ 
  https://www.devmedia.com.br/cocoapods-gerenciando-bibliotecas-no-xcode/29642
  https://trailhead.salesforce.com/pt-BR/content/learn/modules/mobile_sdk_native_ios/mobilesdk_ios_cocoapods
  instalacao do cocoapods no projeto

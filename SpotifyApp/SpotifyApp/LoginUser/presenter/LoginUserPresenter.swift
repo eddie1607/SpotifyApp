@@ -7,10 +7,17 @@
 //
 
 import Foundation
+import SafariServices
 
 class LoginUserPresenter: LoginUserModuleInterface{
-
     
+   /*
+    func sessionManager(manager: SPTSessionManager, didInitiate session: SPTSession) {
+        print("autenticou com sucesso")
+    }
+    
+    func sessionManager(manager: SPTSessionManager, didFailWith error: Error) {
+        print("Falha na autenticacao")*/
     
     var description: String = ""
     
@@ -19,16 +26,20 @@ class LoginUserPresenter: LoginUserModuleInterface{
     var  view: LoginUserInterface?
     
     var interactor: LoginUserInteractorInput?
+//    var auth: SPTAuth?
+    var safariVC = SFSafariViewController?.self
     
     let SpotifyClientID = "f254582fead244228898533acce50058"
     let SpotifyRedirectURL = URL(string: "spoti://callback")!
-
+    var  configuration :SPTConfiguration?
+    var sessionManager: SPTSessionManager?
     /*
     ///maneira facil de instanciar um sptconfiguration
     lazy var configuration = SPTConfiguration(
       clientID: SpotifyClientID,
       redirectURL: SpotifyRedirectURL
     )*/
+    /*
     lazy var configuration: SPTConfiguration = {
            let configuration = SPTConfiguration(clientID: SpotifyClientID, redirectURL: SpotifyRedirectURL)
            // Set the playURI to a non-nil value so that Spotify plays music after authenticating and App Remote can connect
@@ -40,8 +51,7 @@ class LoginUserPresenter: LoginUserModuleInterface{
            configuration.tokenSwapURL = URL(string: "http://localhost:1234/swap")
            configuration.tokenRefreshURL = URL(string: "http://localhost:1234/refresh")
            return configuration
-       }()
-    
+       }()*/
  /*   lazy var appRemote: SPTAppRemote = {
       let appRemote = SPTAppRemote(configuration: self.configuration, logLevel: .debug)
       appRemote.connectionParameters.accessToken = self.accessToken
@@ -68,7 +78,44 @@ class LoginUserPresenter: LoginUserModuleInterface{
 
     }
     func access(){
-      //  self.configuration.clientID = SpotifyClientID
-       // self.configuration.redirectURL = SpotifyRedirectURL
+        //provedor
+        self.configuration = SPTConfiguration(
+            clientID: self.SpotifyClientID,
+            redirectURL: self.SpotifyRedirectURL
+       )
+        /// estabelecendo uma sessao
+        self.sessionManager = {
+            
+            let manager = SPTSessionManager.init(configuration: self.configuration!, delegate: nil)
+            return manager
+            
+            }()
+        
+        if sessionManager?.session != nil {
+            let session = (sessionManager?.session ?? nil)!
+            loginSuccess(session: session )
+            
+           // sessionManager.self(manager: SPTSessionManager, didInitiate session: SPTSession)
+        }
+        else{
+            loginProcess()
+        }
+        
     }
+    func  loginSuccess(session: SPTSession){
+        print(session.accessToken)
+        print(session.expirationDate)
+        print(session)
+        
+    }
+    func loginProcess(){
+    
+      var appRemote: SPTAppRemote = {
+        let appRemote = SPTAppRemote(configuration: self.configuration!, logLevel: .debug)
+            // appRemote.connectionParameters.accessToken = self.accessToken
+             //appRemote.delegate = self
+             return appRemote
+           }()
+    }
+    
 }
