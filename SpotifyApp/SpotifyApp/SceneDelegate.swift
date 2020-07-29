@@ -16,32 +16,11 @@ import UIKit
 @available(iOS 13.0, *)
 @available(iOS 13.0, *)
 @available(iOS 13.0, *)
-class SceneDelegate: UIResponder, UIWindowSceneDelegate, SPTAppRemoteDelegate, SPTAppRemotePlayerStateDelegate{
+class SceneDelegate: UIResponder, UIWindowSceneDelegate{
     
     let SpotifyClientID = "f254582fead244228898533acce50058"
     let SpotifyRedirectURL = URL(string: "spoti://callback")!
 
-    lazy var configuration = SPTConfiguration(
-      clientID: SpotifyClientID,
-      redirectURL: SpotifyRedirectURL
-    )
-    
-    
-    func appRemoteDidEstablishConnection(_ appRemote: SPTAppRemote) {
-        print("connected")
-    }
-    
-    func appRemote(_ appRemote: SPTAppRemote, didFailConnectionAttemptWithError error: Error?) {
-        print("Disconnected")
-    }
-    
-    func appRemote(_ appRemote: SPTAppRemote, didDisconnectWithError error: Error?) {
-        print("failed")
-    }
-    
-    func playerStateDidChange(_ playerState: SPTAppRemotePlayerState) {
-        print("player state changed")
-    }
     
 
     var window: UIWindow?
@@ -74,6 +53,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, SPTAppRemoteDelegate, S
             
             // manager
             let userDisconnectedManager = UserDisconnectedManager()
+            let loginUserManager = LoginUserManager()
             
             userDisconnectedRouter.presenter = userDisconnectedPresenter
             userDisconnectedRouter.createAccountRouter = createAccountRouter
@@ -89,6 +69,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, SPTAppRemoteDelegate, S
             
             userDisconnectedInteractor.presenter = userDisconnectedPresenter
             userDisconnectedInteractor.manager = userDisconnectedManager
+            loginUserInteractor.manager = loginUserManager
+            loginUserInteractor.presenter = loginUserPresenter
+
             
             userDisconnectedRouter.presentUserDisconnectedFrom(window: window!, view: view)
             
@@ -112,6 +95,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, SPTAppRemoteDelegate, S
     //// esse metodo para poder  utilizar o  spotify
 @available(iOS 13.0, *)
 func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+    
+    guard let url = URLContexts.first?.url else {
+                 return
+             }
+           NotificationCenter.default.post(name: NSNotification.Name("loginSuccessful"), object: nil, userInfo: ["url": url])
+           
+           print(url)
    /*   guard let url = URLContexts.first?.url else {
               return
           }

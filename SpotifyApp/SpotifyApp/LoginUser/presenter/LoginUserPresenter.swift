@@ -11,55 +11,55 @@ import SafariServices
 
 class LoginUserPresenter: LoginUserModuleInterface{
     
-   /*
-    func sessionManager(manager: SPTSessionManager, didInitiate session: SPTSession) {
-        print("autenticou com sucesso")
-    }
     
-    func sessionManager(manager: SPTSessionManager, didFailWith error: Error) {
-        print("Falha na autenticacao")*/
-    
-    var description: String = ""
-    
+    let SpotifyClientID = "f254582fead244228898533acce50058"
+    let SpotifyRedirectURL = URL(string: "spoti://callback")!
+       
+       ///maneira facil de instanciar um sptconfiguration
     var router: LoginUserRouter?
     
     var  view: LoginUserInterface?
     
     var interactor: LoginUserInteractorInput?
-//    var auth: SPTAuth?
-    var safariVC = SFSafariViewController?.self
     
-    let SpotifyClientID = "f254582fead244228898533acce50058"
-    let SpotifyRedirectURL = URL(string: "spoti://callback")!
-    var  configuration :SPTConfiguration?
-    var sessionManager: SPTSessionManager?
-    /*
-    ///maneira facil de instanciar um sptconfiguration
-    lazy var configuration = SPTConfiguration(
-      clientID: SpotifyClientID,
-      redirectURL: SpotifyRedirectURL
-    )*/
-    /*
-    lazy var configuration: SPTConfiguration = {
-           let configuration = SPTConfiguration(clientID: SpotifyClientID, redirectURL: SpotifyRedirectURL)
-           // Set the playURI to a non-nil value so that Spotify plays music after authenticating and App Remote can connect
-           // otherwise another app switch will be required
-           configuration.playURI = ""
-
-           // Set these url's to your backend which contains the secret to exchange for an access token
-           // You can use the provided ruby script spotify_token_swap.rb for testing purposes
-           configuration.tokenSwapURL = URL(string: "http://localhost:1234/swap")
-           configuration.tokenRefreshURL = URL(string: "http://localhost:1234/refresh")
-           return configuration
-       }()*/
- /*   lazy var appRemote: SPTAppRemote = {
-      let appRemote = SPTAppRemote(configuration: self.configuration, logLevel: .debug)
-      appRemote.connectionParameters.accessToken = self.accessToken
-      appRemote.delegate = self
-      return appRemote
-    }() */
-
+    var auth: SPTAuth?
     
+    var safariVC : SFSafariViewController?///// referencia do safari para
+    
+    
+    //// essa notification  escuta os eventos da web  capturado pelo notification center no metodo open url do appdelegate
+    init() {
+        NotificationCenter.default.addObserver(self, selector: #selector(loginCallback), name: Notification.Name(rawValue: "loginSuccessful"), object: nil)
+        }
+    
+    
+    ///// esse metodo  é o selector  aplicado no notification center que escuta os evsentos  vindos da web
+    @objc func loginCallback(notification: Notification){
+        if let url = notification.userInfo?["url"] as? URL {
+            print(url)
+            if (self.auth?.canHandle(url))!{  ///verificar dados de acesso
+                self.safariVC!.dismiss(animated: true, completion: nil) ////esconde o safari
+                self.safariVC = nil
+                self.auth?.handleAuthCallback(withTriggeredAuthURL: url, callback: {(error, session) in
+                    
+                    if let session = session{
+                        
+                        let userDefaults = UserDefaults.standard //com conceito de user default  e possil gravar  em dados locais a sessao
+                        let sessionData = NSKeyedArchiver.archivedData(withRootObject: session)
+                        print(sessionData)
+                        userDefaults.set(sessionData, forKey: "SpotifySession")
+                        userDefaults.synchronize()
+                        print(session.accessToken as Any)
+                        
+                    }
+                })
+                
+            }
+            
+        }
+    }
+    
+   
     func login(email: String, passwd: String) {
         interactor?.findUser(by: email, password: passwd) // interactor deve achar para o presenter o usuario
      }
@@ -77,45 +77,41 @@ class LoginUserPresenter: LoginUserModuleInterface{
         }
 
     }
+    
     func access(){
-        //provedor
-        self.configuration = SPTConfiguration(
-            clientID: self.SpotifyClientID,
-            redirectURL: self.SpotifyRedirectURL
-       )
-        /// estabelecendo uma sessao
-        self.sessionManager = {
-            
-            let manager = SPTSessionManager.init(configuration: self.configuration!, delegate: nil)
-            return manager
-            
-            }()
+        self.auth = SPTAuth.defaultInstance() //// instamciar um obj de autenticacao
+        self.auth?.clientID = "f254582fead244228898533acce50058"
+        self.auth?.redirectURL = URL(string: "spoti://callback")
+        self.auth?.sessionUserDefaultsKey = "current session"
+        self.auth?.requestedScopes = [SPTAuthStreamingScope] /// tipo de acesso que eu irei solicital
         
-        if sessionManager?.session != nil {
-            let session = (sessionManager?.session ?? nil)!
-            loginSuccess(session: session )
+        guard let auth = auth else {return} /// descompactar o objeto de autenticcao
+        
+        if auth.session != nil && auth.session.isValid(){
             
-           // sessionManager.self(manager: SPTSessionManager, didInitiate session: SPTSession)
+            loginSuccess(session: auth.session)
+            
+        }else{
+            
+            loginProcess()///// processo  de login  na web
         }
-        else{
-            loginProcess()
-        }
+        
+
+    
         
     }
     func  loginSuccess(session: SPTSession){
-        print(session.accessToken)
-        print(session.expirationDate)
+        print(session.accessToken! )
+        print(session.canonicalUsername!)// nome de user
+        print(session.expirationDate!)
         print(session)
         
     }
-    func loginProcess(){
-    
-      var appRemote: SPTAppRemote = {
-        let appRemote = SPTAppRemote(configuration: self.configuration!, logLevel: .debug)
-            // appRemote.connectionParameters.accessToken = self.accessToken
-             //appRemote.delegate = self
-             return appRemote
-           }()
-    }
+    func loginProcess(){ //// me connnectta  com o safari
+        let  authURL = self.auth?.spotifyWebAuthenticationURL()
+        self.safariVC = SFSafariViewController(url: authURL!)///// instancia o safari
+        UIApplication.shared.keyWindow?.rootViewController?.present(safariVC!, animated: true, completion: nil)/// apresenta o safari na aplicacao
+        ///// a resposta do safari deve sesr  apresentada no appdele
+        }
     
 }

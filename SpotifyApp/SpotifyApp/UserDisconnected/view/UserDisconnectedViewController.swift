@@ -85,6 +85,7 @@ class UserDisconnectedViewController: UIViewController, UserDisconnectedInterfac
         
         
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+
         eventHandler?.showHighlightMessage()  ////ligacao do view commo preventer  chamado o funcao especifica
         //// notification center escuta   observa a situacaoa descrita no name e dexecuta um selector
        NotificationCenter.default.addObserver(self,

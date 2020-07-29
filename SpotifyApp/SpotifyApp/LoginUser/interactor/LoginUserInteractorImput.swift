@@ -15,10 +15,10 @@ protocol LoginUserInteractorInput {
 class LoginUserInteractor: LoginUserInteractorInput{
     
     var presenter: LoginUserModuleInterface? ///referencia para o presenter
-    var manager: LoginUserManager?
+    var manager: LoginUserManager? //usados para fazer as requisicoes
     
     func findUser(by name: String, password: String) {
-
+// manager usado pra fazer requisicoes
         let user = manager?.findUser(by: name, password: password) // busca no maanager  passanaado  esse nome e essa senha
 
             presenter?.loginResponse(loginUser: user)

@@ -11,7 +11,5 @@
 
 
 //#endif /* SpotifyApp_Bridging_Header_h */
-#import <SpotifyiOS/SpotifyiOS.h>
-#import <SpotifyiOS/SPTLogin.h>
-#import <SpotifyiOS/SPTAppRemote.h>
-#import <SpotifyiOS/SPTAppRemoteConnectionParams.h>
+//#import <SpotifyiOS/SpotifyiOS.h>
+#import <SpotifyAuthentication/SpotifyAuthentication.h>

@@ -117,7 +117,11 @@ Caso de uso LoginUser
  5-pod install na raiz do projeto
  6 abrir o xco
  
+ ++++++ configurar api do spotifi para acessar a  api na web+++++++++
  
+ instalar o pod spotify-Login
+ importar  o pod
+ - configurar  a bridging  build settings> other Librarian Flags -ObjC
  
  
  

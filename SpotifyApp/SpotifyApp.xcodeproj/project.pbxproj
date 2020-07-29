@@ -40,10 +40,12 @@
 		2F51F0B924C2295C002A62FC /* LoginUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F51F0B824C2295C002A62FC /* LoginUserViewController.swift */; };
 		2F51F0BD24C293AC002A62FC /* LoginUserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F51F0BC24C293AC002A62FC /* LoginUserPresenter.swift */; };
 		2F51F0C124C486AE002A62FC /* LoginUserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F51F0C024C486AE002A62FC /* LoginUserRouter.swift */; };
-		2FED76BD24C8D636005D9CED /* SpotifyiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FED76BC24C8D636005D9CED /* SpotifyiOS.framework */; };
 		2FED76E024CA30E9005D9CED /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FED76DF24CA30E9005D9CED /* AVFoundation.framework */; };
 		2FED76E224CA30F3005D9CED /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FED76E124CA30F3005D9CED /* AVKit.framework */; };
 		2FED76E424CA3116005D9CED /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FED76E324CA3116005D9CED /* SystemConfiguration.framework */; };
+		2FED76E624CF7A7B005D9CED /* SpotifyAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FED76E524CF7A7A005D9CED /* SpotifyAuthentication.framework */; };
+		2FED76E824CF7A99005D9CED /* SpotifyMetadata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FED76E724CF7A99005D9CED /* SpotifyMetadata.framework */; };
+		2FED76EA24CF7C53005D9CED /* SpotifyAudioPlayback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FED76E924CF7C53005D9CED /* SpotifyAudioPlayback.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,11 +100,13 @@
 		2F51F0B824C2295C002A62FC /* LoginUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserViewController.swift; sourceTree = "<group>"; };
 		2F51F0BC24C293AC002A62FC /* LoginUserPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserPresenter.swift; sourceTree = "<group>"; };
 		2F51F0C024C486AE002A62FC /* LoginUserRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserRouter.swift; sourceTree = "<group>"; };
-		2FED76BC24C8D636005D9CED /* SpotifyiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyiOS.framework; sourceTree = "<group>"; };
 		2FED76BE24C8E073005D9CED /* SpotifyApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SpotifyApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		2FED76DF24CA30E9005D9CED /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		2FED76E124CA30F3005D9CED /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		2FED76E324CA3116005D9CED /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		2FED76E524CF7A7A005D9CED /* SpotifyAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyAuthentication.framework; sourceTree = "<group>"; };
+		2FED76E724CF7A99005D9CED /* SpotifyMetadata.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyMetadata.framework; sourceTree = "<group>"; };
+		2FED76E924CF7C53005D9CED /* SpotifyAudioPlayback.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyAudioPlayback.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,21 +115,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FED76E424CA3116005D9CED /* SystemConfiguration.framework in Frameworks */,
+				2FED76EA24CF7C53005D9CED /* SpotifyAudioPlayback.framework in Frameworks */,
+				2FED76E624CF7A7B005D9CED /* SpotifyAuthentication.framework in Frameworks */,
 				2FED76E224CA30F3005D9CED /* AVKit.framework in Frameworks */,
+				2FED76E824CF7A99005D9CED /* SpotifyMetadata.framework in Frameworks */,
 				2FED76E024CA30E9005D9CED /* AVFoundation.framework in Frameworks */,
-				2FED76BD24C8D636005D9CED /* SpotifyiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0CD58B54145D50EE48B30C9E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		2F0F756524BCE41E00548DD0 = {
 			isa = PBXGroup;
 			children = (
 				2F0F757024BCE41E00548DD0 /* SpotifyApp */,
 				2F0F756F24BCE41E00548DD0 /* Products */,
 				2FED76BB24C8D5E2005D9CED /* Frameworks */,
+				0CD58B54145D50EE48B30C9E /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -358,10 +372,12 @@
 		2FED76BB24C8D5E2005D9CED /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2FED76E924CF7C53005D9CED /* SpotifyAudioPlayback.framework */,
+				2FED76E724CF7A99005D9CED /* SpotifyMetadata.framework */,
+				2FED76E524CF7A7A005D9CED /* SpotifyAuthentication.framework */,
 				2FED76E324CA3116005D9CED /* SystemConfiguration.framework */,
 				2FED76E124CA30F3005D9CED /* AVKit.framework */,
 				2FED76DF24CA30E9005D9CED /* AVFoundation.framework */,
-				2FED76BC24C8D636005D9CED /* SpotifyiOS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

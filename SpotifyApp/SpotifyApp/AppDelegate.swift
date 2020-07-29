@@ -7,31 +7,16 @@
 //
 
 import UIKit
-
+import SafariServices
 @available(iOS 13.0, *)
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate,SPTAppRemoteDelegate{
+class AppDelegate: UIResponder, UIApplicationDelegate{
     
-   func appRemoteDidEstablishConnection(_ appRemote: SPTAppRemote) {
-      print("connected")
-    }
-    func appRemote(_ appRemote: SPTAppRemote, didDisconnectWithError error: Error?) {
-      print("disconnected")
-    }
-    func appRemote(_ appRemote: SPTAppRemote, didFailConnectionAttemptWithError error: Error?) {
-      print("failed")
-    }
-    func playerStateDidChange(_ playerState: SPTAppRemotePlayerState) {
-      print("player state changed")
-    }
-    
-
  var window: UIWindow?
    
-    
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-                UITextField.appearance().tintColor = UIColor.SPT.green
+    
+        UITextField.appearance().tintColor = UIColor.SPT.green /// cursor verde
         self.window = UIWindow(frame: UIScreen.main.bounds)
         
         // view
@@ -91,7 +76,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate,SPTAppRemoteDelegate{
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         // Called when a new scene session is being created.
         // Use this method to select a configuration to create the new scene with.
-        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
+    
+            return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
     }
 
     func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
@@ -99,15 +85,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate,SPTAppRemoteDelegate{
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
+    
+    //// eventos vindos da web sao   percebidos no appDelegate  com esse metodo open ur4 provalmente meu presenter ira escutar  essa  notification
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-    //  let parameters = appRemote.authorizationParameters(from: url);
-
-           // if let access_token = parameters?[SPTAppRemoteAccessTokenKey] {
-               // appRemote.connectionParameters.accessToken = access_token
-             //   self.accessToken = access_token
-         //   } else if let error_description = parameters?[SPTAppRemoteErrorDescriptionKey] {
-                // Show the error
-        //    }
+        
+        NotificationCenter.default.post(name: NSNotification.Name("loginSuccessful"), object: nil, userInfo: ["url": url])
+        
         print(url)
       return true
     }

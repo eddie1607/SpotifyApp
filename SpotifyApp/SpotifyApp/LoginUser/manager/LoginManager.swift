@@ -14,7 +14,7 @@ class LoginUserManager{
      /// dados estaticos simunado  chamada de rede
     
     static let fakesUser:[LoginUser] = [
-    LoginUser(username: "edmilson", password: "123"),
+    LoginUser(username: "Edmilson", password: "123"),
     LoginUser(username: "Blabla", password: "blalba")
     ]
     /// o metodo do  interator  deve ser executado aqui
