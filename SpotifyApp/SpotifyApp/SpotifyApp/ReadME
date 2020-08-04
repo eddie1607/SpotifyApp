@@ -1,0 +1,94 @@
+criando app clone de spotify
+
+utilizando arquitetura viper
+-> baseada em casos de uso
+-> cada caso de uso deve conter as  5 camadas de as
+
+1-  definir caso de usos
+  UserDisconnected
+  
+2- dentro do caso de uso definir os diretorios das 5 camadas
+ view,presenter,router,inteactor,entity
+ 
+2.1 View  a view escolhida ser feita de maneira programatica dessa forma
+ - precisara ser definida no secedelegate (https://learnappmaking.com/scene-delegate-app-delegate-xcode-11-ios-13/)
+ - desativada a storybord
+ - testado o carregameno da view programatica
+ - criar uma referencia para o presenter
+ 2.2 presenter
+ - definir  no diretorio presenter um protocol de defina as acoes  que serao implentadads por quem assinar esse protocolo
+ 
+ - esse protocolo deve ter uma referencia para  routers
+ 
+ 
+ # na view criar botao
+ #  atribuir autolayout usando linguagem apple visual format
+ # adicionar  itens a subview
+ #
+ 
+ ===============
+ proximox passos
+ 1 acertar todos os elementos que devem estar contidos  na view
+ 2 adicionalos a essas view
+ 3-aplicar autolayout neles
+ 4-definir protocolos e delegates
+ 5-registrar a celula customizada a ser criada
+ 6-criar  uma colecao que  ira apresentar dados listados
+ 7- disponibilizar uma interface ()protocols , que certamente sera usadao pelo presenter para  interagir  com a view
+ 8- chama o presenter a executar o metodo showHighligthmessage (paasndoresponsabilidades para ele e ele ira acionar o interactor)
+ 
+1 View
+esse  objetos devem estar na UserDisconnectedViewController
+inserir o  tocador // AVPlayer
+page control// objeto  que controla as  paginas
+logo// uiview logo do spotify
+bgView// conatine
+highlightCollection // colecao  a ser apresentada
+
+2 presenter
+ nesse diretorio: responsabilidades  captar e formatar dados para a a view , conectar as rotas, connectr demais pontos
+ 1-na classe que impltementa o presenter deve consstar a interace"UserDisconnectedInterface" para   utilizar o metodo show criado na view para passar os dados da colecao
+ 2 presenter deve conter referencias  em sua implementacao:
+ ->router
+ ->view
+ ->interactor
+ 
+ 3 interector
+ -possui dois protocols:
+ UserDisconnectedImput essa 'e a impementacao do  interactor em que esta contida  uma referencia para o presenter
+    referencia para o manager possivel chamada web (implementacao de rede)
+ 
+ UserDisconnectedInteractorOutPut esse protocolo deve ser implentado pelo presenter atraves dele  sera possivel o presenter apresentar os dados vindos  do interactorchando o metodo definido na interface que ele implementa obrigaatoriamnete
+
+ 4 manager
+   retorna  as  colecoes simula  a  chamada de rede e retorna
+   
+===========
+Caso de uso LoginUser
+ diretorios
+ LoginUser
+ - presenter
+ -view
+ -interactor
+ -router
+ 
+ comecar ajustando os commons
+  customizando componentes para  serm reutilizados sno caso  uma textfield
+  
+  para  mudar  a cor do statusbar (reconfigura  sempre para  tom )
+  1  no infoplist ->  application requirements iphone
+                  ->    acrescentar viewcontroller-based status bar apperance = no
+  2               ->status bar style light content
+  
+ 
+ - no  caso UserDiconnectedViewcontroller  foi adicionado ao selector o novo  nto de login ( LoginDidTapped)
+ -  atribuido o selector com objc
+ - no presenter exixte uma  referencia para o router
+ -chamase a rota  correspondente
+  login instancia uma viewcontroller
+  - sao aplicado as animacoes de  transicao 
+ 
+ 
+ 
+ 
+
