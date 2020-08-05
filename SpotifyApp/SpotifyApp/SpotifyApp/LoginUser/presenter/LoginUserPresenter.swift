@@ -18,7 +18,7 @@ class LoginUserPresenter: LoginUserModuleInterface {
     
     var interactor: LoginUserInteractorInput?
     
-   // var auth: SPTAuth?
+    var auth: SPTAuth?
     
     func login(email: String, passwd: String) {
         interactor?.findUser(by: email, password: passwd)
